@@ -1,0 +1,166 @@
+/*
+Title: styles.css
+Author: Laurel Condon
+Date: 17 June 2017
+Description: Styles for Pets-r-us page
+*/
+
+
+body {
+    background-color: rgb(246, 247, 230);
+    text-decoration: none;
+}
+footer {
+    font-size: 10px;
+    color: darkgray;
+    text-align: center;
+}
+h1 {
+    font-size: 70px;
+    text-align: center;
+}
+.container {
+    width: 90%;
+    margin: auto auto;
+}
+H2 {
+    font-size: 30px;
+    text-align:center;
+}
+h3 {
+    text-align: center;
+    font-size: 20px;
+}
+.txtone {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+    font-size: 24px;
+    color: darkolivegreen;
+    word-spacing: 2oe;
+}
+
+.navbar {
+    background-color: darkslategrey;
+    border-radius: 1in;
+    height: .4in;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#nav-link:visited {
+    color: lightgray;
+}
+
+#nav-link {
+    text-decoration: none;
+    padding: 4px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+}
+
+hr {
+    border: 2px solid darkgreen;
+    margin-top: 40px;
+}
+
+ul {
+    text-align: center;
+    font-size: 22px;
+    list-style: none;
+    font-style: italic;
+}
+
+.star-week {
+    width: 80%;
+}
+
+.services {
+    list-style-type:square;
+    font-size: 24px;
+    font-style:oblique;
+}
+figcaption figure {
+    text-align: center;
+}
+
+figure {
+    text-align: center;
+}
+
+#testimonials {
+    font-style: italic;
+    width: 80%;
+   margin: auto
+}
+
+/* Contact Form */
+
+form { max-width:420px; margin:50px auto; }
+
+.feedback-input {
+  color:black;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight:500;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 22px;
+  background-color: transparent;
+  border:2px solid  darkslategray;
+  transition: all 0.3s;
+  padding: 13px;
+  margin-bottom: 15px;
+  width:100%;
+  box-sizing: border-box;
+  outline:0;
+}
+
+.feedback-input:focus { border:2px solid darkslategray; }
+
+textarea {
+  height: 150px;
+  line-height: 150%;
+  resize:vertical;
+  color: black;
+}
+
+[type="submit"] {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: darkslategray;
+  border-radius:5px;
+  border:0;
+  cursor:pointer;
+  color:white;
+  font-size:24px;
+  padding-top:10px;
+  padding-bottom:10px;
+  transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:700;
+}
+[type="submit"]:hover { background:gray; }
+
+#grooming {
+    width: 600px;
+   display: table;
+}
+
+.groom-img {
+    vertical-align: middle;
+    padding: 10px;
+    display: table-cell;
+}
+.groom-img img {
+    max-width: 300px;
+}
+
+.packages {
+    list-style-type: square;
+    font-size: 19px;
+}
