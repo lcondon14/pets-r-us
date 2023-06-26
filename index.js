@@ -15,7 +15,7 @@ const path = require('path');
 
 // Sets the views directory
 app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, 'public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Sets the view engine to EJS
 app.set('view engine', 'ejs');
