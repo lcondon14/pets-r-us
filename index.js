@@ -11,16 +11,19 @@ Description: Index.js page for Pets-r-us
 
 const express = require('express');
 const app = express();
-const path = require('path');
 
 // Sets the views directory
-app._router.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public'));
+app.use('/css', express.static(__dirname + '/public/styles'));
+app.use('/img', express.static(__dirname + '/public/images'));
+app.use('/partials', express.static(__dirname + '/views/partials'));
 
 // Sets the view engine to EJS
 app.set('view engine', 'ejs');
 
 // Defines routes
-app.get('/', (req, res)=> {
+app.get('/', (req, res) => {
     res.render('index');
 });
 
@@ -28,6 +31,13 @@ app.get('/grooming', (req, res) => {
     res.render('grooming');
 });
 
+app.get('/boarding', (req, res) => {
+    res.render('boarding');
+});
+
+app.get('/training', (req, res) => {
+    res.render('training');
+});
 // Server
 const PORT = process.env.PORT || 3000;
 

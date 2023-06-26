@@ -40,24 +40,29 @@ h3 {
 }
 
 .navbar {
-    background-color: darkslategrey;
+   
     border-radius: 1in;
     height: .4in;
     color: white;
     text-align: center;
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 50px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-}
-
-#nav-link:visited {
-    color: lightgray;
 }
 
 #nav-link {
     text-decoration: none;
+    color:white;
     padding: 4px;
+    background-color: lightseagreen;
 }
+ .navbar a {
+    background-color: lightseagreen;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: .1in;
+    color: white;
+ }
 
 p {
     text-align: center;

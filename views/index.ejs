@@ -8,21 +8,11 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/public/styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Home</title>
-</head>
+<%- include('partials/_head.ejs') %>
+<%- include("partials/_header.ejs") %>
 <body>
     <div class="container">
-    <div class="navbar">
-        <a href="index.ejs" id="nav-link">HOME</a>
-        <a href="grooming.ejs" id="nav-link">GROOMING</a>
-    </div>
+
     <div class="logoimg"><h1>Pets-R-Us</h1></div>
     <div class="card">
         <div class="card-title"><h2>About Us</h2></div>
@@ -86,4 +76,5 @@
 <footer>
     Photo Credits: <a href="https://www.freepik.com/free-photo/friendly-smart-basenji-dog-giving-his-paw-close-up-isolated-white_11829513.htm#query=happy%20dogs&position=29&from_view=search&track=ais">Image by bublikhaus</a> on Freepik
 </footer>
+<%- include('partials/_footer.ejs') %>
 </html>
