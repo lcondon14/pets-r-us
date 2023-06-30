@@ -169,3 +169,28 @@ textarea {
     list-style-type: square;
     font-size: 19px;
 }
+
+/* Registration page */
+.reg-container {
+    width: 700px;
+    background-color: darkgoldenrod;
+    color:white;
+    padding: 50px;
+    margin:auto;
+}
+
+.contact-container {
+    margin:auto;
+}
+
+.form-field {
+    padding: 20px;
+    text-align: center;
+    border: 2px solid white;
+  
+}
+
+.btn {
+    margin:auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
