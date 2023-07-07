@@ -197,12 +197,15 @@ textarea {
 table {
     border-collapse: collapse;
     width: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 45px;
   }
 
   th, td {
     border: 5px solid darkgoldenrod;
     padding: 12px;
     text-align: left;
+  }
+
+  .cust-img {
+    margin: auto;
+    width: 100%;
   }
