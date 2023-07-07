@@ -172,7 +172,7 @@ textarea {
 
 /* Registration page */
 .reg-container {
-    width: 700px;
+    width: 400px;
     background-color: darkgoldenrod;
     color:white;
     padding: 50px;
@@ -186,11 +186,23 @@ textarea {
 .form-field {
     padding: 20px;
     text-align: center;
-    border: 2px solid white;
-  
+    border: 2px solid white;  
 }
 
 .btn {
     margin:auto;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 45px;
+  }
+
+  th, td {
+    border: 5px solid darkgoldenrod;
+    padding: 12px;
+    text-align: left;
+  }
