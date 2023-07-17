@@ -21,6 +21,9 @@ mongoose.connect(CONN).then(() => {
 })
 
 const Customer = require('./modules/customer');
+const Appointment = require('./views/appointment');
+const services = require('./public/data/services.json');
+
 
 // Sets the views directory
 app.set('views', path.join(__dirname, 'views'));
@@ -29,6 +32,9 @@ app.use("/site", express.static(path.join(__dirname, "public/stylesheets")));
 
 // Sets the view engine to EJS
 app.set('view engine', 'ejs');
+
+// Middleware to JSON body
+app.use(express.json());
 
 // Defines routes
 app.get('/', (req, res) => {
@@ -51,6 +57,13 @@ app.get('/register', (req, res) => {
     res.render('register');
 });
 
+app.get('/appointment' (req, res) => {
+    res.render('appointment');
+});
+
+app.get('/services' (req,res) => {
+    res.json(services);
+});
 // Server
 const PORT = process.env.PORT || 3000;
 
@@ -75,6 +88,19 @@ app.get('/customers', (req, res) => {
     .catch((error) => {
         console.error('Error retrieving customer:', error);
         res.status(500).send('Internal Server Error');
+    });
+});
+
+app.post('/appointment' (req, res) => {
+    const appointmentData = req.body;
+
+    const appointment = new Appointment(appointmentData);
+    appointment.save()
+    .then(() => {
+        res.send('Appointment saved successfully!');
+    })
+    .catch((error) => {
+        res.status(500).send('Error saving appointment.')
     });
 });
 
