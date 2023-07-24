@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/public/styles/styles.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>My Appointments</title>
+        </head>
+
+<body%- include("partials/_header.ejs") %>
+
+<body>
+<div class="app-img">
+    <img src="../public/images/20943532.jpg">
+</div>
+    <div class="container">
+        <div class="app-container">
+            <div class="card">
+                <div class="card-title"><h2>Welcome to the My Appointments Lookup Page</h2></div>
+            <p>Use the email you provided during registration to check your next appointment!</p>
+                 <div class="card-content">
+                    <div class="form">
+                    <div class="form-field">
+                        <label for="emailInput">Please enter your email address:</label>
+                        <input type="text" id="email" name="email" class="input" required>
+                    </div>
+                    </div>
+                    <div class="form">
+                        <div class="form-field">
+                            <input type="submit" value="Search" id="search" class="btn btn-primary">
+                        </div>
+                    </div>
+                <div id="appointments"></div>
+                </div>
+            
+            </div>
+        </div>
+    </div>
+  
+</body>
+
+<script>
+document.getElementById('search').onclick = function() {
+    const email = document.getElementById('email').value;
+    
+    fetch('/api/appointments/' + email)
+        .then(res => res.json())
+        .then(data => {
+            let tableString = `<tr><th>First Name</th><th>Last Name</th><th>Email</th><th>Service</th></tr>`;
+
+            for (let appointment of data) {
+                tableString += `<tr><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.email}</td><td>${appointment.service}</td></tr>`;
+            }
+            tableString += `</table>`;
+            document.getElementById('appointments').innerHTML = tableString;
+
+        });
+}
+</script>
+<footer>
+    Photo Credits:<a href="https://www.freepik.com/free-vector/event-management-performance-efficiency-time-optimization-reminder-task-project-deadline-flat-design-element-appointment-date-reminding-concept-illustration_11668372.htm#query=appointment&position=2&from_view=search&track=sph">Image by vectorjuice</a> on Freepik
+</footer>
+<%- include('partials/_footer.ejs') %>
+</body>
+</html>

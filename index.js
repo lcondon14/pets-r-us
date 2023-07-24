@@ -64,6 +64,24 @@ app.get('/appointment' (req, res) => {
 app.get('/services' (req,res) => {
     res.json(services);
 });
+
+app.get('/myappointments', (req, res) => {
+    res.render('myappointments', {
+        title: 'Pets-R-Us: My Appointments',
+        pageTitle: 'View My Appointments'
+    })
+  })
+
+app.get('/api/appointments/:email', async(req, res, next) => {
+    appointment.find({'email': req.params.email}, function(err, appointments) {
+        if (err) {
+            console.log(err);
+            next(err);
+        } else {
+            res.json(appointments);
+        }
+    })
+})
 // Server
 const PORT = process.env.PORT || 3000;
 
